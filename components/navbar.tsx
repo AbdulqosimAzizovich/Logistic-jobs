@@ -88,8 +88,8 @@ export default function Navbar() {
           <SheetContent side="right">
             <div className="flex flex-col gap-8 pt-10">
               <Link href="/" className="flex items-center gap-2">
-                <Truck className="h-6 w-6 text-gray-100" />
-                <span className="text-lg font-bold text-gray-100">
+                <Truck className="h-6 w-6 text-gray-600" />
+                <span className="text-lg font-bold  text-gray-600">
                   TruckConnect
                 </span>
               </Link>
@@ -99,7 +99,7 @@ export default function Navbar() {
                     <Link
                       href={route.path}
                       className={cn(
-                        "text-base font-medium transition-colors hover:text-gray-100",
+                        "text-base font-medium transition-colors hover:text-gray-700",
                         pathname === route.path
                           ? "text-gray-100"
                           : "text-gray-600"
