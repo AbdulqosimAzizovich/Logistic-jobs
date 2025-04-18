@@ -1,17 +1,20 @@
 "use client";
 
-// import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
-// import { Input } from "@/components/ui/input";
+import { Input } from "@/components/ui/input";
 import { TrendingUp } from "lucide-react";
 import AnimateOnScroll from "./animate-on-scroll";
-// Search, MapPin,
-export default function Hero() {
-  // const [searchQuery, setSearchQuery] = useState("");
-  // const [location, setLocation] = useState("");
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
 
+export default function Hero() {
   return (
     <div className="relative">
       <div className="absolute inset-0 z-0">
@@ -24,100 +27,157 @@ export default function Hero() {
         />
       </div>
 
-      <div className="relative z-10 flex min-h-[90vh] flex-col items-center justify-center px-4 text-center text-white">
-        <AnimateOnScroll animation="fade-up">
-          <h1 className="mb-6 max-w-4xl text-4xl font-bold leading-tight md:text-5xl lg:text-6xl">
-            Find Your Perfect Trucking Job with{" "}
-            <span className="text-gold">TruckConnect</span>
-          </h1>
-        </AnimateOnScroll>
+      <div className="relative z-10 flex min-h-[90vh] px-4 items-center justify-center">
+        <div className="container grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+          {/* Left Column - Hero Content */}
+          <div className="text-white text-left">
+            <AnimateOnScroll animation="fade-up">
+              <h1 className="mb-6 max-w-xl text-4xl font-bold leading-tight md:text-5xl lg:text-6xl">
+                Find Your Perfect Trucking Job with{" "}
+                <span className="text-amber-400">TruckConnect</span>
+              </h1>
+            </AnimateOnScroll>
 
-        <AnimateOnScroll animation="fade-up" delay={100}>
-          <p className="mb-8 max-w-2xl text-lg text-gray-200 md:text-xl">
-            Connecting qualified truck drivers with top logistics companies
-            across the nation. Your next opportunity is just a search away.
-          </p>
-        </AnimateOnScroll>
+            <AnimateOnScroll animation="fade-up" delay={100}>
+              <p className="mb-8 max-w-xl text-lg text-gray-200 md:text-xl">
+                Connecting qualified truck drivers with top logistics companies
+                across the nation. Your next opportunity is just a search away.
+              </p>
+            </AnimateOnScroll>
 
-        {/* <AnimateOnScroll
-          animation="fade-up"
-          delay={200}
-          className="w-full max-w-4xl"
-        >
-          <div className="mb-8 rounded-xl bg-white/10 p-6 backdrop-blur-md">
-            <div className="grid gap-4 md:grid-cols-3">
-              <div>
-                <div className="flex items-center rounded-md bg-white/20 px-3">
-                  <Search className="mr-2 h-5 w-5 text-gray-200" />
-                  <Input
-                    type="text"
-                    placeholder="Job title or keywords"
-                    className="border-0 bg-transparent text-white placeholder:text-gray-300 focus-visible:ring-0 focus-visible:ring-offset-0"
-                    value={searchQuery}
-                    onChange={(e) => setSearchQuery(e.target.value)}
-                  />
+            <AnimateOnScroll animation="fade-up" delay={300}>
+              <div className="flex flex-wrap gap-4 mb-8">
+                <Button
+                  asChild
+                  variant="outline"
+                  className="border-white text-white hover:bg-white/20"
+                >
+                  <Link href="/about">Learn More</Link>
+                </Button>
+                <Button
+                  asChild
+                  className="bg-blue-700 text-white hover:bg-blue-600"
+                >
+                  <Link href="/contact">For Employers</Link>
+                </Button>
+              </div>
+            </AnimateOnScroll>
+
+            <AnimateOnScroll animation="fade-up" delay={400}>
+              <div className="flex flex-col space-y-4">
+                <div className="flex items-center gap-2">
+                  <TrendingUp className="h-5 w-5 text-green-400" />
+                  <span className="text-gray-200">5,000+ Available Jobs</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <TrendingUp className="h-5 w-5 text-green-400" />
+                  <span className="text-gray-200">
+                    1,000+ Partner Companies
+                  </span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <TrendingUp className="h-5 w-5 text-green-400" />
+                  <span className="text-gray-200">
+                    10,000+ Successful Placements
+                  </span>
                 </div>
               </div>
+            </AnimateOnScroll>
+          </div>
 
-              <div>
-                <div className="flex items-center rounded-md bg-white/20 px-3">
-                  <MapPin className="mr-2 h-5 w-5 text-gray-200" />
+          {/* Right Column - Contact Form */}
+          <AnimateOnScroll animation="fade-up" delay={200}>
+            <div className="bg-white rounded-lg p-8 max-w-md mx-auto">
+              <h2 className="text-2xl font-bold text-gray-800 mb-6">
+                Looking for work?
+                <br />
+                We'll call you back
+              </h2>
+              <form className="space-y-4">
+                <div>
+                  <label
+                    htmlFor="firstName"
+                    className="block text-sm font-medium text-gray-700 mb-1"
+                  >
+                    First Name
+                  </label>
                   <Input
+                    id="firstName"
                     type="text"
-                    placeholder="City, state, or zip code"
-                    className="border-0 bg-transparent text-white placeholder:text-gray-300 focus-visible:ring-0 focus-visible:ring-offset-0"
-                    value={location}
-                    onChange={(e) => setLocation(e.target.value)}
+                    className="w-full"
+                    required
                   />
                 </div>
-              </div>
-
-              <Button
-                asChild
-                className="h-12 bg-gold text-blue-900 hover:bg-amber-400"
-              >
-                <Link href="/jobs">Search Jobs</Link>
-              </Button>
+                <div>
+                  <label
+                    htmlFor="lastName"
+                    className="block text-sm font-medium text-gray-700 mb-1"
+                  >
+                    Last Name
+                  </label>
+                  <Input
+                    id="lastName"
+                    type="text"
+                    className="w-full"
+                    required
+                  />
+                </div>
+                <div>
+                  <label
+                    htmlFor="email"
+                    className="block text-sm font-medium text-gray-700 mb-1"
+                  >
+                    Email
+                  </label>
+                  <Input id="email" type="email" className="w-full" required />
+                </div>
+                <div>
+                  <label
+                    htmlFor="phone"
+                    className="block text-sm font-medium text-gray-700 mb-1"
+                  >
+                    Phone Number
+                  </label>
+                  <Input
+                    id="phone"
+                    type="tel"
+                    placeholder="(100) 000-0000"
+                    className="w-full"
+                    required
+                  />
+                </div>
+                <div>
+                  <label
+                    htmlFor="role"
+                    className="block text-sm font-medium text-gray-700 mb-1"
+                  >
+                    Your role in the transportation company{" "}
+                    <span className="text-red-500">*</span>
+                  </label>
+                  <Select required>
+                    <SelectTrigger id="role" className="w-full bg-white">
+                      <SelectValue placeholder="—Please choose an option—" />
+                    </SelectTrigger>
+                    <SelectContent className="bg-white">
+                      <SelectItem value="driver">
+                        CDL A truck driver looking for a job
+                      </SelectItem>
+                      <SelectItem value="owner">
+                        Owner of the trucking company
+                      </SelectItem>
+                    </SelectContent>
+                  </Select>
+                </div>
+                <Button
+                  type="submit"
+                  className="w-full bg-blue-900 text-white hover:bg-blue-800"
+                >
+                  Request a callback
+                </Button>
+              </form>
             </div>
-          </div>
-        </AnimateOnScroll> */}
-
-        <AnimateOnScroll animation="fade-up" delay={300}>
-          <div className="flex flex-wrap justify-center gap-4">
-            <Button
-              asChild
-              variant="outline"
-              className="border-white text-white hover:bg-white/20"
-            >
-              <Link href="/about">Learn More</Link>
-            </Button>
-            <Button
-              asChild
-              className="bg-blue-700 text-white hover:bg-blue-600"
-            >
-              <Link href="/contact">For Employers</Link>
-            </Button>
-          </div>
-        </AnimateOnScroll>
-
-        <AnimateOnScroll animation="fade-up" delay={400}>
-          <div className="mt-12 flex flex-wrap items-center justify-center gap-8">
-            <div className="flex items-center gap-2">
-              <TrendingUp className="h-5 w-5 text-green-400" />
-              <span className="text-gray-200">5,000+ Available Jobs</span>
-            </div>
-            <div className="flex items-center gap-2">
-              <TrendingUp className="h-5 w-5 text-green-400" />
-              <span className="text-gray-200">1,000+ Partner Companies</span>
-            </div>
-            <div className="flex items-center gap-2">
-              <TrendingUp className="h-5 w-5 text-green-400" />
-              <span className="text-gray-200">
-                10,000+ Successful Placements
-              </span>
-            </div>
-          </div>
-        </AnimateOnScroll>
+          </AnimateOnScroll>
+        </div>
       </div>
     </div>
   );
