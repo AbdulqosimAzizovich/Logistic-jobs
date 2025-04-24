@@ -14,18 +14,19 @@ const testimonials = [
   },
   {
     id: 2,
-    name: "Sarah Williams",
+    name: "Robert Garcia",
     role: "Regional Driver",
-    image: "/pr1.jpg",
+    image: "/pr3.jpg",
     content:
       "After years of struggling to find local routes that would allow me to be home more often, I found the perfect position through THE RECRUITING . The job filtering options made it easy to find exactly what I was looking for.",
     rating: 5,
   },
   {
     id: 3,
-    name: "Robert Garcia",
+    name: "Sarah Williams",
     role: "Fleet Manager",
-    image: "/pr3.jpg",
+    image: "/pr1.jpg",
+
     content:
       "As a hiring manager, THE RECRUITING  has been invaluable for finding qualified drivers. The platform connects us with pre-screened candidates who match our requirements, saving us time and resources in the hiring process.",
     rating: 4,
