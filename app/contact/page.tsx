@@ -72,7 +72,7 @@ export default function ContactPage() {
                   Hours of Operation
                 </h3>
                 <p className="text-gray-700">
-                  Monday - Friday: 8:00 AM - 6:00 PM
+                  Monday - Friday: 9:00 AM - 5:00 PM
                   <br />
                   Saturday: 9:00 AM - 1:00 PM
                   <br />

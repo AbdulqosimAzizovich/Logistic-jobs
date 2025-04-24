@@ -21,7 +21,7 @@ export default function Footer() {
               <span className="text-xl font-bold">THE RECRUITING </span>
             </Link>
             <p className="mb-6 text-blue-100">
-              Connecting truck drivers with quality jobs since 2010. Our
+              Connecting truck drivers with quality jobs since 2020. Our
               platform makes it easy to find the perfect logistics position.
             </p>
             <div className="flex gap-4">

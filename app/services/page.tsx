@@ -56,7 +56,7 @@ export default function ServicesPage() {
             data-aos="fade-left"
           >
             <Image
-              src="https://kzmof4c28tjyljmexmxb.lite.vusercontent.net/placeholder.svg?height=600&width=800"
+              src="/trd.webp"
               alt="Truck driver services"
               fill
               className="object-cover"
@@ -72,7 +72,7 @@ export default function ServicesPage() {
             data-aos="fade-right"
           >
             <Image
-              src="https://kzmof4c28tjyljmexmxb.lite.vusercontent.net/placeholder.svg?height=600&width=800"
+              src="/134.png"
               alt="Company services"
               fill
               className="object-cover"
@@ -182,7 +182,7 @@ export default function ServicesPage() {
           </div>
           <div className="relative h-64 overflow-hidden rounded-lg md:h-80">
             <Image
-              src="https://kzmof4c28tjyljmexmxb.lite.vusercontent.net/placeholder.svg?height=500&width=700"
+              src="/getStart.webp"
               alt="Get started"
               fill
               className="object-cover"

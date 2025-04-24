@@ -8,7 +8,7 @@ const testimonials = [
     name: "Michael Johnson",
     role: "Long-haul Truck Driver",
     image:
-      "https://kzmof4c28tjyljmexmxb.lite.vusercontent.nethttps://kzmof4c28tjyljmexmxb.lite.vusercontent.net/placeholder.svg?height=200&width=200",
+      "https://kzmof4c28tjyljmexmxb.lite.vusercontent.net/placeholder.svg?height=200&width=200",
     content:
       "THE RECRUITING  helped me find a job that perfectly matched my experience and route preferences. The application process was smooth, and I was on the road with a great company within a week!",
     rating: 5,
@@ -18,7 +18,7 @@ const testimonials = [
     name: "Sarah Williams",
     role: "Regional Driver",
     image:
-      "https://kzmof4c28tjyljmexmxb.lite.vusercontent.nethttps://kzmof4c28tjyljmexmxb.lite.vusercontent.net/placeholder.svg?height=200&width=200",
+      "https://kzmof4c28tjyljmexmxb.lite.vusercontent.net/placeholder.svg?height=200&width=200",
     content:
       "After years of struggling to find local routes that would allow me to be home more often, I found the perfect position through THE RECRUITING . The job filtering options made it easy to find exactly what I was looking for.",
     rating: 5,
@@ -28,7 +28,7 @@ const testimonials = [
     name: "Robert Garcia",
     role: "Fleet Manager",
     image:
-      "https://kzmof4c28tjyljmexmxb.lite.vusercontent.nethttps://kzmof4c28tjyljmexmxb.lite.vusercontent.net/placeholder.svg?height=200&width=200",
+      "https://kzmof4c28tjyljmexmxb.lite.vusercontent.net/placeholder.svg?height=200&width=200",
     content:
       "As a hiring manager, THE RECRUITING  has been invaluable for finding qualified drivers. The platform connects us with pre-screened candidates who match our requirements, saving us time and resources in the hiring process.",
     rating: 4,

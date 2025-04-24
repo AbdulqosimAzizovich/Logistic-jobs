@@ -17,7 +17,7 @@ export default function AboutPage() {
           data-aos="fade-up"
           data-aos-delay="100"
         >
-          Connecting truck drivers with quality jobs since 2010
+          Connecting truck drivers with quality jobs since 2020
         </p>
       </div>
 
@@ -43,7 +43,8 @@ export default function AboutPage() {
           data-aos="fade-left"
         >
           <Image
-            src="https://kzmof4c28tjyljmexmxb.lite.vusercontent.net/placeholder.svg?height=600&width=800"
+            // src="https://kzmof4c28tjyljmexmxb.lite.vusercontent.net/placeholder.svg?height=600&width=800"
+          src="/diploma.WEBP"
             alt="Logistics operations"
             fill
             className="object-cover"
@@ -57,7 +58,7 @@ export default function AboutPage() {
           data-aos="fade-right"
         >
           <Image
-            src="https://kzmof4c28tjyljmexmxb.lite.vusercontent.net/placeholder.svg?height=600&width=800"
+            src="/about2.jpg"
             alt="Our team"
             fill
             className="object-cover"
@@ -66,7 +67,7 @@ export default function AboutPage() {
         <div className="order-1 md:order-2" data-aos="fade-left">
           <h2 className="mb-4 text-3xl font-bold text-blue-900">Our Story</h2>
           <p className="mb-6 text-gray-700">
-            Founded in 2010 by a team of logistics experts and former truck
+            Founded in 2020 by a team of logistics experts and former truck
             drivers, THE RECRUITING emerged from a simple observation: the
             disconnect between qualified drivers and quality job opportunities
             was causing inefficiencies throughout the industry.
