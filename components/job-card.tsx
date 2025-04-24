@@ -1,23 +1,23 @@
-import Link from "next/link"
-import Image from "next/image"
-import { MapPin, Calendar, DollarSign, Briefcase } from "lucide-react"
-import { Button } from "@/components/ui/button"
-import { Badge } from "@/components/ui/badge"
-import { cn } from "@/lib/utils"
+import Link from "next/link";
+import Image from "next/image";
+import { MapPin, Calendar, DollarSign, Briefcase } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { Badge } from "@/components/ui/badge";
+import { cn } from "@/lib/utils";
 
 interface JobCardProps {
   job: {
-    id: string
-    title: string
-    company: string
-    logo: string
-    location: string
-    salary: string
-    type: string
-    posted: string
-    urgent?: boolean
-  }
-  featured?: boolean
+    id: string;
+    title: string;
+    company: string;
+    logo: string;
+    location: string;
+    salary: string;
+    type: string;
+    posted: string;
+    urgent?: boolean;
+  };
+  featured?: boolean;
 }
 
 export default function JobCard({ job, featured = false }: JobCardProps) {
@@ -25,15 +25,22 @@ export default function JobCard({ job, featured = false }: JobCardProps) {
     <div
       className={cn(
         "relative rounded-xl bg-white p-6 shadow-md transition-all hover:shadow-lg",
-        featured && "border-l-4 border-blue-900",
+        featured && "border-l-4 border-blue-900"
       )}
     >
-      {job.urgent && <Badge className="absolute right-4 top-4 bg-red-500 hover:bg-red-600">Urgent</Badge>}
+      {job.urgent && (
+        <Badge className="absolute right-4 top-4 bg-red-500 hover:bg-red-600">
+          Urgent
+        </Badge>
+      )}
 
       <div className="mb-4 flex items-center">
         <div className="mr-4 h-14 w-14 overflow-hidden rounded-md">
           <Image
-            src={job.logo || "/placeholder.svg"}
+            src={
+              job.logo ||
+              "https://kzmof4c28tjyljmexmxb.lite.vusercontent.net/placeholder.svg"
+            }
             alt={job.company}
             width={56}
             height={56}
@@ -69,5 +76,5 @@ export default function JobCard({ job, featured = false }: JobCardProps) {
         <Link href={`/jobs/${job.id}`}>View Details</Link>
       </Button>
     </div>
-  )
+  );
 }

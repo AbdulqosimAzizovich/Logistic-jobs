@@ -11,7 +11,7 @@ import AOSProvider from "@/components/aos-provider";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "TruckConnect | Logistics Job Portal",
+  title: "THE RECRUITING  | Logistics Job Portal",
   description: "Find the best trucking and logistics jobs across the country",
 };
 

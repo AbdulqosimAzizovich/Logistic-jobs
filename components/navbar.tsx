@@ -48,7 +48,7 @@ export default function Navbar() {
       <div className="container mx-auto flex items-center justify-between px-4">
         <Link href="/" className="flex items-center gap-2">
           <Truck className="h-8 w-8 text-white" />
-          <span className="text-xl font-bold text-white">TruckConnect</span>
+          <span className="text-xl font-bold text-white">THE RECRUITING </span>
         </Link>
 
         <nav className="hidden items-center gap-8 md:flex">
@@ -90,7 +90,7 @@ export default function Navbar() {
               <Link href="/" className="flex items-center gap-2">
                 <Truck className="h-6 w-6 text-gray-600" />
                 <span className="text-lg font-bold  text-gray-600">
-                  TruckConnect
+                  THE RECRUITING
                 </span>
               </Link>
               <nav className="flex flex-col gap-4">

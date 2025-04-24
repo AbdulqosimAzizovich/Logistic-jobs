@@ -34,7 +34,7 @@ export default function Hero() {
             <AnimateOnScroll animation="fade-up">
               <h1 className="mb-6 max-w-xl text-4xl font-bold leading-tight md:text-5xl lg:text-6xl">
                 Find Your Perfect Trucking Job with{" "}
-                <span className="text-amber-400">TruckConnect</span>
+                <span className="text-amber-400">THE RECRUITING </span>
               </h1>
             </AnimateOnScroll>
 
@@ -67,18 +67,16 @@ export default function Hero() {
               <div className="flex flex-col space-y-4">
                 <div className="flex items-center gap-2">
                   <TrendingUp className="h-5 w-5 text-green-400" />
-                  <span className="text-gray-200">5,000+ Available Jobs</span>
+                  <span className="text-gray-200">100+ Available Jobs</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <TrendingUp className="h-5 w-5 text-green-400" />
+                  <span className="text-gray-200">200+ Partner Companies</span>
                 </div>
                 <div className="flex items-center gap-2">
                   <TrendingUp className="h-5 w-5 text-green-400" />
                   <span className="text-gray-200">
-                    1,000+ Partner Companies
-                  </span>
-                </div>
-                <div className="flex items-center gap-2">
-                  <TrendingUp className="h-5 w-5 text-green-400" />
-                  <span className="text-gray-200">
-                    10,000+ Successful Placements
+                    1500+ Successful Placements
                   </span>
                 </div>
               </div>
@@ -89,9 +87,9 @@ export default function Hero() {
           <AnimateOnScroll animation="fade-up" delay={200}>
             <div className="bg-white rounded-lg p-8 max-w-md mx-auto">
               <h2 className="text-2xl font-bold text-gray-800 mb-6">
-                Looking for work?
+                Leave your information here
                 <br />
-                We'll call you back
+                Our managers will contact you soon
               </h2>
               <form className="space-y-4">
                 <div>

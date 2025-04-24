@@ -1,8 +1,8 @@
-# TruckConnect - Logistics Job Portal
+# THE RECRUITING - Logistics Job Portal
 
-![TruckConnect Logo](public/image.png?height=100&width=100)
+![THE RECRUITING  Logo](public/image.png?height=100&width=100)
 
-TruckConnect is a modern, responsive web application built with Next.js and Tailwind CSS that connects truck drivers with quality job opportunities in the logistics industry. The platform serves as a bridge between qualified drivers seeking reliable work and companies needing dependable transportation solutions.
+THE RECRUITING is a modern, responsive web application built with Next.js and Tailwind CSS that connects truck drivers with quality job opportunities in the logistics industry. The platform serves as a bridge between qualified drivers seeking reliable work and companies needing dependable transportation solutions.
 
 ## 🚚 Features
 

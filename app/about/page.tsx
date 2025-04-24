@@ -1,6 +1,6 @@
-import Image from "next/image"
-import { Button } from "@/components/ui/button"
-import Link from "next/link"
+import Image from "next/image";
+import { Button } from "@/components/ui/button";
+import Link from "next/link";
 
 export default function AboutPage() {
   return (
@@ -10,7 +10,7 @@ export default function AboutPage() {
           className="mb-4 text-4xl font-bold text-gray-900 md:text-5xl lg:text-6xl"
           data-aos="fade-up"
         >
-          About <span className="text-blue-900">TruckConnect</span>
+          About <span className="text-blue-900">THE RECRUITING </span>
         </h1>
         <p
           className="mx-auto max-w-3xl text-lg text-gray-600"
@@ -25,7 +25,7 @@ export default function AboutPage() {
         <div data-aos="fade-right">
           <h2 className="mb-4 text-3xl font-bold text-blue-900">Our Mission</h2>
           <p className="mb-6 text-gray-700">
-            At TruckConnect, we're dedicated to revolutionizing the logistics
+            At THE RECRUITING , we're dedicated to revolutionizing the logistics
             industry by creating meaningful connections between qualified truck
             drivers and reputable companies. We understand the challenges faced
             by both drivers seeking reliable work and companies needing
@@ -67,7 +67,7 @@ export default function AboutPage() {
           <h2 className="mb-4 text-3xl font-bold text-blue-900">Our Story</h2>
           <p className="mb-6 text-gray-700">
             Founded in 2010 by a team of logistics experts and former truck
-            drivers, TruckConnect emerged from a simple observation: the
+            drivers, THE RECRUITING emerged from a simple observation: the
             disconnect between qualified drivers and quality job opportunities
             was causing inefficiencies throughout the industry.
           </p>
@@ -130,7 +130,7 @@ export default function AboutPage() {
         </h2>
         <p className="mx-auto mb-8 max-w-2xl text-gray-700">
           Whether you're a driver looking for your next opportunity or a company
-          seeking reliable transportation solutions, TruckConnect is here to
+          seeking reliable transportation solutions, THE RECRUITING is here to
           help you succeed.
         </p>
         <div className="flex flex-wrap justify-center gap-4">
