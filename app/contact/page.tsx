@@ -89,7 +89,7 @@ export default function ContactPage() {
             <p className="mb-2 text-gray-700">
               For urgent driver assistance, call our dedicated support line:
             </p>
-            <p className="text-xl font-bold text-blue-900">(555) 999-HELP</p>
+            <p className="text-xl font-bold text-blue-900">513 757 1045</p>
             <p className="mt-2 text-sm text-gray-600">
               Available 24/7 for emergency assistance
             </p>
@@ -159,7 +159,7 @@ export default function ContactPage() {
               <Input
                 id="phone"
                 type="tel"
-                placeholder="(555) 123-4567"
+                placeholder="513 757 1045"
                 className="border-gray-300"
               />
             </div>
