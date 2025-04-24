@@ -44,7 +44,7 @@ export default function AboutPage() {
         >
           <Image
             // src="https://kzmof4c28tjyljmexmxb.lite.vusercontent.net/placeholder.svg?height=600&width=800"
-          src="/diploma.WEBP"
+            src="/diploma.jpg"
             alt="Logistics operations"
             fill
             className="object-cover"
