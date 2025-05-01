@@ -39,7 +39,7 @@ export default function Testimonials() {
       <AnimateOnScroll animation="fade-up">
         <div className="mb-12 text-center">
           <h2 className="mb-4 text-3xl font-bold text-blue-900 md:text-4xl">
-            What People Say
+            Real Experiences. Real Results.
           </h2>
           <p className="mx-auto max-w-2xl text-gray-600">
             Hear from drivers and companies who have found success with THE

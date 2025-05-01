@@ -68,7 +68,7 @@ export default function AboutPage() {
           <h2 className="mb-4 text-3xl font-bold text-blue-900">Our Story</h2>
           <p className="mb-6 text-gray-700">
             Founded in 2020 by a team of logistics experts and former truck
-            drivers, THE RECRUITING emerged from a simple observation: the
+            drivers, THE RECRUITING came out of seeing a simple need.: the
             disconnect between qualified drivers and quality job opportunities
             was causing inefficiencies throughout the industry.
           </p>
@@ -92,7 +92,7 @@ export default function AboutPage() {
         <div className="grid gap-8 md:grid-cols-3">
           {[
             {
-              title: "Integrity",
+              title: "Honesty",
               description:
                 "We believe in honest communication and transparent business practices that build trust with our users.",
               delay: "0",
@@ -106,7 +106,7 @@ export default function AboutPage() {
             {
               title: "Community",
               description:
-                "We foster a supportive community where drivers and companies can thrive together.",
+                "We create a team where drivers and companies work and grow together.",
               delay: "200",
             },
           ].map((value, index) => (

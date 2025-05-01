@@ -2,6 +2,7 @@ import Hero from "@/components/hero";
 import FeaturedJobs from "@/components/featured-jobs";
 import HowItWorks from "@/components/how-it-works";
 import Testimonials from "@/components/testimonials";
+import WhyChooseUsSection from "@/components/WhyChooseUsSection";
 // import CallToAction from "@/components/call-to-action"
 
 export default function Home() {
@@ -11,6 +12,7 @@ export default function Home() {
       <FeaturedJobs />
       <HowItWorks />
       <Testimonials />
+      <WhyChooseUsSection />
       {/* <CallToAction /> */}
     </div>
   );
