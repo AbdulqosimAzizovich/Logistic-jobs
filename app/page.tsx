@@ -11,8 +11,8 @@ export default function Home() {
       <Hero />
       <FeaturedJobs />
       <HowItWorks />
-      <Testimonials />
       <WhyChooseUsSection />
+      <Testimonials />
       {/* <CallToAction /> */}
     </div>
   );

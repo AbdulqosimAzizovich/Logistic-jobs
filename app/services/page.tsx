@@ -79,7 +79,7 @@ export default function ServicesPage() {
           data-aos="fade-up"
           data-aos-delay="100"
         >
-          Comprehensive logistics solutions for drivers and companies
+          Clear solutions. Strong connections.
         </p>
       </div>
 

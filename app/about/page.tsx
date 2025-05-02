@@ -67,17 +67,14 @@ export default function AboutPage() {
         <div className="order-1 md:order-2" data-aos="fade-left">
           <h2 className="mb-4 text-3xl font-bold text-blue-900">Our Story</h2>
           <p className="mb-6 text-gray-700">
-            Founded in 2020 by a team of logistics experts and former truck
-            drivers, THE RECRUITING came out of seeing a simple need.: the
-            disconnect between qualified drivers and quality job opportunities
-            was causing inefficiencies throughout the industry.
+            Since 2018, we’ve been helping truck drivers find great jobs with
+            American trucking companies. With a 97.3% success rate, we know how
+            to match the right driver with the right company.
           </p>
           <p className="text-gray-700">
-            What began as a small job board has evolved into a comprehensive
-            platform that serves thousands of drivers and hundreds of companies
-            nationwide. Our growth is driven by our commitment to transparency,
-            fairness, and creating value for all stakeholders in the logistics
-            ecosystem.
+            We work with 120+ trucking companies big and small so drivers have
+            plenty of good options. At the same time, we help trucking companies
+            find skilled, reliable drivers fast.
           </p>
         </div>
       </div>

@@ -25,7 +25,7 @@ export default function HowItWorks() {
       title: "Start Driving",
       description:
         "Get on the road with a job that offers competitive pay and benefits.",
-      path: "tel: 513-657-4506",
+      path: "tel: 513 757 1045",
       delay: 200,
     },
   ];
