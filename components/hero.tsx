@@ -22,6 +22,7 @@ export default function Hero() {
           src="/5.jpg?height=1080&width=1920"
           alt="Truck on highway"
           fill
+          style={{ transform: "scaleX(-1)" }}
           className="object-cover brightness-50"
           priority
         />
