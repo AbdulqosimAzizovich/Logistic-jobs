@@ -67,7 +67,7 @@ export default function AboutPage() {
         <div className="order-1 md:order-2" data-aos="fade-left">
           <h2 className="mb-4 text-3xl font-bold text-blue-900">Our Story</h2>
           <p className="mb-6 text-gray-700">
-            Since 2018, we’ve been helping truck drivers find great jobs with
+            Since 2020, we’ve been helping truck drivers find great jobs with
             American trucking companies. With a 97.3% success rate, we know how
             to match the right driver with the right company.
           </p>
