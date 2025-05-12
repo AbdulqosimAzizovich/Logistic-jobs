@@ -12,6 +12,7 @@ import {
   SheetClose,
 } from "@/components/ui/sheet";
 import { cn } from "@/lib/utils";
+import Image from "next/image";
 
 const routes = [
   { name: "Home", path: "/" },
@@ -47,7 +48,14 @@ export default function Navbar() {
     >
       <div className="container mx-auto flex items-center justify-between px-4">
         <Link href="/" className="flex items-center gap-2">
-          <Truck className="h-8 w-8 text-white" />
+          <Image
+            src="/oq-fonsiz.png"
+            alt="Logo"
+            width={40}
+            height={40}
+            className="h-10 w-10 rounded-full"
+            priority
+          />
           <span className="text-xl font-bold text-white">THE RECRUITING </span>
         </Link>
 
