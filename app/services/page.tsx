@@ -233,7 +233,7 @@ export default function ServicesPage() {
           </div>
           <div className="relative h-64 overflow-hidden rounded-lg md:h-80">
             <Image
-              src="/getStart.webp"
+              src="/getStart.png"
               alt="Get started"
               fill
               className="object-cover"

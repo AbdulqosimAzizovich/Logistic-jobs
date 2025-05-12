@@ -66,18 +66,6 @@ export default function Navbar() {
           ))}
         </nav>
 
-        {/* <div className="hidden items-center gap-4 md:flex">
-          <Button
-            variant="outline"
-            className="border-gray-100  hover:bg-gray-300"
-          >
-            Log In
-          </Button>
-          <Button className="bg-gray-100 text-black hover:bg-gray-300">
-            Sign Up
-          </Button>
-        </div> */}
-
         <Sheet>
           <SheetTrigger asChild>
             <Button variant="ghost" size="icon" className="md:hidden">
@@ -110,17 +98,6 @@ export default function Navbar() {
                   </SheetClose>
                 ))}
               </nav>
-              {/* <div className="flex flex-col gap-4">
-                <Button
-                  variant="outline"
-                  className="border-gray-100  hover:bg-gray-300"
-                >
-                  Log In
-                </Button>
-                <Button className="bg-gray-100 text-black hover:bg-gray-300">
-                  Sign Up
-                </Button>
-              </div> */}
             </div>
           </SheetContent>
         </Sheet>
