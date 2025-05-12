@@ -64,180 +64,182 @@ export default function ServicesPage() {
     },
   ];
   return (
-    <div className="container mx-auto px-4 py-16">
-      <div className="mb-16 text-center">
-        <AnimateOnScroll animation="fade-up">
-          <h1
-            className="mb-4 text-4xl font-bold text-gray-900 md:text-5xl lg:text-6xl"
+    <div className="bg-[#0E0E0E] min-h-screen">
+      <div className="container mx-auto px-4 py-16 text-[#FFFFFF]">
+        <div className="mb-16 text-center">
+          <AnimateOnScroll animation="fade-up">
+            <h1
+              className="mb-4 text-4xl font-bold text-[#FFFFFF] md:text-5xl lg:text-6xl"
+              data-aos="fade-up"
+            >
+              Our <span className="text-[#6CC000]">Services</span>
+            </h1>
+          </AnimateOnScroll>
+          <p
+            className="mx-auto max-w-3xl text-lg text-[#CCCCCC]"
             data-aos="fade-up"
+            data-aos-delay="100"
           >
-            Our <span className="text-blue-900">Services</span>
-          </h1>
-        </AnimateOnScroll>
-        <p
-          className="mx-auto max-w-3xl text-lg text-gray-600"
-          data-aos="fade-up"
-          data-aos-delay="100"
-        >
-          Clear solutions. Strong connections.
-        </p>
-      </div>
+            Clear solutions. Strong connections.
+          </p>
+        </div>
 
-      <div className="mb-20">
-        <AnimateOnScroll animation="fade-right">
-          <div className="grid gap-12 md:grid-cols-2 md:items-center">
-            <div data-aos="fade-right">
-              <h2 className="mb-4 text-3xl font-bold text-blue-900">
-                For Truck Drivers
-              </h2>
-              <p className="mb-6 text-gray-700">
-                We offer a range of services designed to help truck drivers find
-                the perfect job opportunities and advance their careers in the
-                logistics industry.
-              </p>
-              <ul className="mb-8 space-y-4">
-                {[
-                  "Access to thousands of verified job listings",
-                  "Personalized job recommendations based on your experience and preferences",
-                  "Direct communication with hiring companies",
-                  "Work-Life Balance opportunities for Drivers",
-                  "High-Paying Job Choices",
-                ].map((item, index) => (
-                  <li key={index} className="flex items-start">
-                    <CheckCircle className="mr-2 h-6 w-6 flex-shrink-0 text-green-600" />
-                    <span className="text-gray-700">{item}</span>
-                  </li>
-                ))}
-              </ul>
-              <Button asChild className="bg-blue-900 hover:bg-blue-800">
-                <Link href="/jobs">Browse Jobs</Link>
-              </Button>
+        <div className="mb-20">
+          <AnimateOnScroll animation="fade-right">
+            <div className="grid gap-12 md:grid-cols-2 md:items-center">
+              <div data-aos="fade-right">
+                <h2 className="mb-4 text-3xl font-bold text-[#6CC000]">
+                  For Truck Drivers
+                </h2>
+                <p className="mb-6 text-[#CCCCCC]">
+                  We offer a range of services designed to help truck drivers
+                  find the perfect job opportunities and advance their careers
+                  in the logistics industry.
+                </p>
+                <ul className="mb-8 space-y-4">
+                  {[
+                    "Access to thousands of verified job listings",
+                    "Personalized job recommendations based on your experience and preferences",
+                    "Direct communication with hiring companies",
+                    "Work-Life Balance opportunities for Drivers",
+                    "High-Paying Job Choices",
+                  ].map((item, index) => (
+                    <li key={index} className="flex items-start">
+                      <CheckCircle className="mr-2 h-6 w-6 flex-shrink-0 text-[#6CC000]" />
+                      <span className="text-[#CCCCCC]">{item}</span>
+                    </li>
+                  ))}
+                </ul>
+                <Button asChild className="bg-[#6CC000] hover:bg-[#8BD300]">
+                  <Link href="/jobs">Browse Jobs</Link>
+                </Button>
+              </div>
+
+              <div
+                className="relative h-80 overflow-hidden rounded-xl shadow-xl md:h-96"
+                data-aos="fade-left"
+              >
+                <Image
+                  src="/trd.webp"
+                  alt="Truck driver services"
+                  fill
+                  className="object-cover"
+                />
+              </div>
             </div>
+          </AnimateOnScroll>
+        </div>
 
-            <div
-              className="relative h-80 overflow-hidden rounded-xl shadow-xl md:h-96"
-              data-aos="fade-left"
-            >
-              <Image
-                src="/trd.webp"
-                alt="Truck driver services"
-                fill
-                className="object-cover"
-              />
+        <div className="mb-20">
+          <AnimateOnScroll animation="fade-left">
+            <div className="grid gap-12 md:grid-cols-2 md:items-center">
+              <div
+                className="relative order-2 h-80 overflow-hidden rounded-xl shadow-xl md:order-1 md:h-96"
+                data-aos="fade-right"
+              >
+                <Image
+                  src="/134.png"
+                  alt="Company services"
+                  fill
+                  className="object-cover"
+                />
+              </div>
+
+              <div className="order-1 md:order-2" data-aos="fade-left">
+                <h2 className="mb-4 text-3xl font-bold text-[#6CC000]">
+                  For Companies
+                </h2>
+                <p className="mb-6 text-[#CCCCCC]">
+                  Our platform helps logistics companies find qualified drivers
+                  quickly and efficiently, reducing hiring time and improving
+                  retention rates.
+                </p>
+                <ul className="mb-8 space-y-4">
+                  {[
+                    "Pre-qualified CDL holders (clean mvr, psp & criminal background, verified experience)",
+                    "Only long-term drivers are part of our recruitment process",
+                    "If the drivers not matching your requirements, We'll replace them — guaranteed",
+                    "No upfront fees - pay only after successful hire",
+                    "A large database of strong drivers from Haiti, Africa, Arabian world - Morocco, Tunisa, Egypt, Algeria & CIS countries",
+                    "A wide range of strong drivers to choose from, interview by phone, approve, and hire.",
+                    "All company details will be provided to the driver before hiring, saving you time by avoiding repeated explanations",
+                  ].map((item, index) => (
+                    <li key={index} className="flex items-start">
+                      <CheckCircle className="mr-2 h-6 w-6 flex-shrink-0 text-[#6CC000]" />
+                      <span className="text-[#CCCCCC]">{item}</span>
+                    </li>
+                  ))}
+                </ul>
+                <Button asChild className="bg-[#6CC000] hover:bg-[#8BD300]">
+                  <Link href="/contact">Get Started</Link>
+                </Button>
+              </div>
             </div>
-          </div>
-        </AnimateOnScroll>
-      </div>
+          </AnimateOnScroll>
+        </div>
 
-      <div className="mb-20">
-        <AnimateOnScroll animation="fade-left">
-          <div className="grid gap-12 md:grid-cols-2 md:items-center">
-            <div
-              className="relative order-2 h-80 overflow-hidden rounded-xl shadow-xl md:order-1 md:h-96"
-              data-aos="fade-right"
-            >
-              <Image
-                src="/134.png"
-                alt="Company services"
-                fill
-                className="object-cover"
-              />
-            </div>
+        <div className="mb-20">
+          <AnimateOnScroll animation="fade-up">
+            <h2 className="mb-12 text-center text-3xl font-bold text-[#6CC000]">
+              Additional Services
+            </h2>
+          </AnimateOnScroll>
 
-            <div className="order-1 md:order-2" data-aos="fade-left">
-              <h2 className="mb-4 text-3xl font-bold text-blue-900">
-                For Companies
-              </h2>
-              <p className="mb-6 text-gray-700">
-                Our platform helps logistics companies find qualified drivers
-                quickly and efficiently, reducing hiring time and improving
-                retention rates.
-              </p>
-              <ul className="mb-8 space-y-4">
-                {[
-                  "Pre-qualified CDL holders (clean mvr, psp & criminal background, verified experience)",
-                  "Only long-term drivers are part of our recruitment process",
-                  "If the drivers not matching your requirements, We’ll replace them — guaranteed",
-                  "No upfront fees - pay only after successful hire",
-                  "A large database of strong drivers from Haiti, Africa, Arabian world - Morocco, Tunisa, Egypt, Algeria & CIS countries",
-                  "A wide range of strong drivers to choose from, interview by phone, approve, and hire.",
-                  "All company details will be provided to the driver before hiring, saving you time by avoiding repeated explanations",
-                ].map((item, index) => (
-                  <li key={index} className="flex items-start">
-                    <CheckCircle className="mr-2 h-6 w-6 flex-shrink-0 text-green-600" />
-                    <span className="text-gray-700">{item}</span>
-                  </li>
-                ))}
-              </ul>
-              <Button asChild className="bg-blue-900 hover:bg-blue-800">
-                <Link href="/contact">Get Started</Link>
-              </Button>
-            </div>
-          </div>
-        </AnimateOnScroll>
-      </div>
-
-      <div className="mb-20">
-        <AnimateOnScroll animation="fade-up">
-          <h2 className="mb-12 text-center text-3xl font-bold text-blue-900">
-            Additional Services
-          </h2>
-        </AnimateOnScroll>
-
-        <div className="grid gap-8 md:grid-cols-2 auto-rows-fr">
-          {services.map((service, index) => (
-            <AnimateOnScroll
-              key={index}
-              animation={service.animation as any}
-              delay={service.delay}
-            >
-              <div className="rounded-lg bg-white p-8 shadow-lg transition-all hover:shadow-xl h-full flex flex-col">
-                {/* <h3 className="mb-4 text-xl font-bold text-blue-900">
+          <div className="grid gap-8 md:grid-cols-2 auto-rows-fr">
+            {services.map((service, index) => (
+              <AnimateOnScroll
+                key={index}
+                animation={service.animation as any}
+                delay={service.delay}
+              >
+                <div className="rounded-lg bg-[#1F2A38] p-8 shadow-lg transition-all hover:shadow-xl h-full flex flex-col">
+                  {/* <h3 className="mb-4 text-xl font-bold text-[#6CC000]">
                 {service.title}
               </h3> */}
-                <p className="text-gray-700 text-justify">
-                  {service.description}
-                </p>
-              </div>
-            </AnimateOnScroll>
-          ))}
-        </div>
-      </div>
-      <div
-        className="rounded-xl bg-gradient-to-r from-blue-900 to-blue-700 p-10 text-white shadow-xl"
-        data-aos="fade-up"
-      >
-        <div className="grid gap-8 md:grid-cols-2 md:items-center">
-          <div>
-            <h2 className="mb-4 text-3xl font-bold">Ready to Get Started?</h2>
-            <p className="mb-6">
-              Join thousands of drivers and companies who have found success
-              with THE RECRUITING . Our team is ready to help you navigate the
-              logistics industry with confidence.
-            </p>
-            <div className="flex flex-wrap gap-4">
-              <Button
-                asChild
-                className="bg-white text-blue-900 hover:bg-gray-100"
-              >
-                <Link href="/jobs">Find Jobs</Link>
-              </Button>
-              <Button
-                asChild
-                variant="outline"
-                className="border-white text-white hover:bg-blue-800"
-              >
-                <Link href="/contact">Contact Us</Link>
-              </Button>
-            </div>
+                  <p className="text-[#CCCCCC] text-justify">
+                    {service.description}
+                  </p>
+                </div>
+              </AnimateOnScroll>
+            ))}
           </div>
-          <div className="relative h-64 overflow-hidden rounded-lg md:h-80">
-            <Image
-              src="/getStart.png"
-              alt="Get started"
-              fill
-              className="object-cover"
-            />
+        </div>
+        <div
+          className="rounded-xl bg-gradient-to-r from-[#6CC000] to-[#8BD300] p-10 text-[#0E0E0E] shadow-xl"
+          data-aos="fade-up"
+        >
+          <div className="grid gap-8 md:grid-cols-2 md:items-center">
+            <div>
+              <h2 className="mb-4 text-3xl font-bold">Ready to Get Started?</h2>
+              <p className="mb-6">
+                Join thousands of drivers and companies who have found success
+                with THE RECRUITING. Our team is ready to help you navigate the
+                logistics industry with confidence.
+              </p>
+              <div className="flex flex-wrap gap-4">
+                <Button
+                  asChild
+                  className="bg-[#0E0E0E] hover:bg-[#1F2A38] text-[#FFFFFF]"
+                >
+                  <Link href="/jobs">Find Jobs</Link>
+                </Button>
+                <Button
+                  asChild
+                  variant="outline"
+                  className="border-[#0E0E0E] text-[#0E0E0E] hover:bg-[#0E0E0E] hover:text-[#FFFFFF]"
+                >
+                  <Link href="/contact">Contact Us</Link>
+                </Button>
+              </div>
+            </div>
+            <div className="relative h-64 overflow-hidden rounded-lg md:h-80">
+              <Image
+                src="/getStart.png"
+                alt="Get started"
+                fill
+                className="object-cover"
+              />
+            </div>
           </div>
         </div>
       </div>

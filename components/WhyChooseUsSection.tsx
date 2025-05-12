@@ -52,11 +52,11 @@ const WhyChooseUsSection: React.FC = () => {
   ];
 
   return (
-    <div className="py-16 bg-gray-50">
+    <section className="py-16 bg-[#0E0E0E]">
       <div className="container mx-auto px-4">
         <AnimateOnScroll animation="fade-up">
-          <h2 className="text-3xl font-bold text-center text-blue-900 mb-16">
-            Why Choose <span className="text-blue-600">Us</span>?
+          <h2 className="text-3xl font-bold text-center text-white mb-16">
+            Why Choose <span className="text-[#6CC000]">Us</span>?
           </h2>
         </AnimateOnScroll>
 
@@ -67,21 +67,21 @@ const WhyChooseUsSection: React.FC = () => {
               animation={reason.animation as any}
               delay={reason.delay}
             >
-              <div className="bg-white rounded-lg p-6 shadow-lg h-full flex">
+              <div className="bg-[#1F2A38] rounded-lg p-6 shadow-lg h-full flex">
                 <div className="flex-shrink-0 mr-4">
-                  <div className="bg-blue-600 rounded-full p-2 text-white">
+                  <div className="bg-[#6CC000] rounded-full p-2 text-white">
                     <Check size={20} />
                   </div>
                 </div>
                 <div>
-                  <p className="text-gray-700">{reason.text}</p>
+                  <p className="text-[#CCCCCC]">{reason.text}</p>
                 </div>
               </div>
             </AnimateOnScroll>
           ))}
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

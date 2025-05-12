@@ -24,8 +24,8 @@ export default function JobCard({ job, featured = false }: JobCardProps) {
   return (
     <div
       className={cn(
-        "relative rounded-xl bg-white p-6 shadow-md transition-all hover:shadow-lg",
-        featured && "border-l-4 border-blue-900"
+        "relative rounded-xl bg-[#1F2A38] p-6 shadow-2xl transition-all hover:shadow-2xl hover:scale-[1.02] border border-[#8BD300]/20",
+        featured && "border-l-4 border-[#8BD300]"
       )}
     >
       {job.urgent && (
@@ -35,7 +35,7 @@ export default function JobCard({ job, featured = false }: JobCardProps) {
       )}
 
       <div className="mb-4 flex items-center">
-        <div className="mr-4 h-14 w-14 overflow-hidden rounded-md">
+        <div className="mr-4 h-14 w-14 overflow-hidden rounded-md border-2 border-[#8BD300]/30">
           <Image
             src={
               job.logo ||
@@ -48,31 +48,34 @@ export default function JobCard({ job, featured = false }: JobCardProps) {
           />
         </div>
         <div>
-          <h3 className="font-bold text-blue-900">{job.title}</h3>
-          <p className="text-sm text-gray-600">{job.company}</p>
+          <h3 className="font-bold text-white">{job.title}</h3>
+          <p className="text-sm text-gray-400">{job.company}</p>
         </div>
       </div>
 
       <div className="mb-6 space-y-2">
-        <div className="flex items-center text-sm text-gray-600">
-          <MapPin className="mr-2 h-4 w-4 text-blue-900" />
+        <div className="flex items-center text-sm text-gray-400">
+          <MapPin className="mr-2 h-4 w-4 text-[#8BD300]" />
           {job.location}
         </div>
-        <div className="flex items-center text-sm text-gray-600">
-          <DollarSign className="mr-2 h-4 w-4 text-green-600" />
+        <div className="flex items-center text-sm text-gray-400">
+          <DollarSign className="mr-2 h-4 w-4 text-[#8BD300]" />
           {job.salary}
         </div>
-        <div className="flex items-center text-sm text-gray-600">
-          <Briefcase className="mr-2 h-4 w-4 text-blue-900" />
+        <div className="flex items-center text-sm text-gray-400">
+          <Briefcase className="mr-2 h-4 w-4 text-[#8BD300]" />
           {job.type}
         </div>
-        <div className="flex items-center text-sm text-gray-600">
-          <Calendar className="mr-2 h-4 w-4 text-blue-900" />
+        <div className="flex items-center text-sm text-gray-400">
+          <Calendar className="mr-2 h-4 w-4 text-[#8BD300]" />
           Posted {job.posted}
         </div>
       </div>
 
-      <Button asChild className="w-full bg-blue-900 hover:bg-blue-800">
+      <Button
+        asChild
+        className="w-full bg-gradient-to-r from-[#6CC000] to-[#8BD300] text-black hover:opacity-90"
+      >
         <Link href={`/jobs/${job.id}`}>View Details</Link>
       </Button>
     </div>
