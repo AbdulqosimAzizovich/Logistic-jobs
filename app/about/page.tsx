@@ -1,8 +1,103 @@
+"use client";
 import Image from "next/image";
+import { useState, useEffect, useRef } from "react";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
+interface Point {
+  x: number;
+  y: number;
+  vx: number;
+  vy: number;
+}
 
 export default function AboutPage() {
+  const canvasRef = useRef<HTMLCanvasElement | null>(null);
+
+  useEffect(() => {
+    const canvas = canvasRef.current;
+    if (!canvas) return;
+
+    const ctx = canvas.getContext("2d");
+    if (!ctx) return;
+
+    const points: Point[] = [];
+    const particleCount = 60;
+    const connectionDistance = 120;
+    const animationSpeed = 0.7;
+
+    // Set canvas dimensions to match parent
+    const resizeCanvas = () => {
+      const parent = canvas.parentElement;
+      if (!parent) return;
+
+      canvas.width = parent.clientWidth;
+      canvas.height = parent.clientHeight;
+    };
+
+    window.addEventListener("resize", resizeCanvas);
+    resizeCanvas();
+
+    // Create initial particles
+    for (let i = 0; i < particleCount; i++) {
+      points.push({
+        x: Math.random() * canvas.width,
+        y: Math.random() * canvas.height,
+        vx: (Math.random() - 0.5) * animationSpeed,
+        vy: (Math.random() - 0.5) * animationSpeed,
+      });
+    }
+
+    // Animation loop
+    function animate() {
+      if (!ctx) return;
+      if (!canvas) return;
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+      // Draw particles and update positions
+      ctx.fillStyle = "#FFFFFF";
+      points.forEach((point) => {
+        // Update position
+        point.x += point.vx;
+        point.y += point.vy;
+
+        // Bounce off edges
+        if (point.x < 0 || point.x > canvas.width) point.vx *= -1;
+        if (point.y < 0 || point.y > canvas.height) point.vy *= -1;
+
+        // Draw point
+        ctx.beginPath();
+        ctx.arc(point.x, point.y, 2, 0, Math.PI * 2);
+        ctx.fill();
+      });
+
+      // Draw connections
+      ctx.strokeStyle = "rgba(255, 255, 255, 0.5)";
+      ctx.lineWidth = 0.5;
+
+      for (let i = 0; i < points.length; i++) {
+        for (let j = i + 1; j < points.length; j++) {
+          const dx = points[i].x - points[j].x;
+          const dy = points[i].y - points[j].y;
+          const distance = Math.sqrt(dx * dx + dy * dy);
+
+          if (distance < connectionDistance) {
+            ctx.beginPath();
+            ctx.moveTo(points[i].x, points[i].y);
+            ctx.lineTo(points[j].x, points[j].y);
+            ctx.stroke();
+          }
+        }
+      }
+
+      requestAnimationFrame(animate);
+    }
+
+    animate();
+
+    return () => {
+      window.removeEventListener("resize", resizeCanvas);
+    };
+  }, []);
   return (
     <div className="bg-[#0E0E0E] min-h-screen">
       <div className="container mx-auto px-4 py-16">
@@ -126,32 +221,40 @@ export default function AboutPage() {
           </div>
         </div>
 
-        <div
-          className="text-center p-8 bg-gradient-to-r from-[#6dc0003e] to-[#8BD300] rounded-xl"
-          data-aos="fade-up"
-        >
-          <h2 className="mb-6 text-3xl font-bold text-[#0E0E0E]">
-            Join Our Network
-          </h2>
-          <p className="mx-auto mb-8 max-w-2xl text-[#0E0E0E]">
-            Whether you're a driver looking for your next opportunity or a
-            company seeking reliable transportation solutions, THE RECRUITING is
-            here to help you succeed.
-          </p>
-          <div className="flex flex-wrap justify-center gap-4">
-            <Button
-              asChild
-              className="bg-[#0E0E0E] hover:bg-[#1F2A38] text-[#FFFFFF]"
-            >
-              <Link href="/jobs">Find Jobs</Link>
-            </Button>
-            <Button
-              asChild
-              variant="outline"
-              className="border-[#0E0E0E] text-[#0E0E0E] hover:bg-[#0E0E0E] hover:text-[#FFFFFF]"
-            >
-              <Link href="/contact">Contact Us</Link>
-            </Button>
+        <div className="relative rounded-xl overflow-hidden">
+          {/* Network animation background */}
+          <div className="absolute inset-0 bg-gradient-to-r from-[#6dc0003e] to-[#8BD300]">
+            <canvas
+              ref={canvasRef}
+              className="absolute inset-0 w-full h-full"
+            />
+          </div>
+
+          {/* Content overlay */}
+          <div className="relative text-center p-8">
+            <h2 className="mb-6 text-3xl font-bold text-[#0E0E0E]">
+              Join Our Network
+            </h2>
+            <p className="mx-auto mb-8 max-w-2xl text-[#0E0E0E]">
+              Whether you're a driver looking for your next opportunity or a
+              company seeking reliable transportation solutions, THE RECRUITING
+              is here to help you succeed.
+            </p>
+            <div className="flex flex-wrap justify-center gap-4">
+              <Button
+                asChild
+                className="bg-[#0E0E0E] hover:bg-[#1F2A38] text-[#FFFFFF]"
+              >
+                <Link href="/jobs">Find Jobs</Link>
+              </Button>
+              <Button
+                asChild
+                variant="outline"
+                className="border-[#0E0E0E] text-[#0E0E0E] hover:bg-[#0E0E0E] hover:text-[#FFFFFF]"
+              >
+                <Link href="/contact">Contact Us</Link>
+              </Button>
+            </div>
           </div>
         </div>
       </div>

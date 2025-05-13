@@ -204,6 +204,7 @@ export default function ServicesPage() {
             ))}
           </div>
         </div>
+        
         <div
           className="rounded-xl bg-gradient-to-r from-[#6CC000] to-[#8BD300] p-10 text-[#0E0E0E] shadow-xl"
           data-aos="fade-up"
