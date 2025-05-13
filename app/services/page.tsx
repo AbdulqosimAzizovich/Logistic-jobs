@@ -1,8 +1,18 @@
+"use client";
+
+import { useEffect, useRef } from "react";
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import { CheckCircle } from "lucide-react";
 import AnimateOnScroll from "../../components/animate-on-scroll";
+
+interface Point {
+  x: number;
+  y: number;
+  vx: number;
+  vy: number;
+}
 
 interface ServiceItem {
   title: string;
@@ -19,6 +29,95 @@ interface ServiceItem {
 }
 
 export default function ServicesPage() {
+  const canvasRef = useRef<HTMLCanvasElement | null>(null);
+
+  useEffect(() => {
+    const canvas = canvasRef.current;
+    if (!canvas) return;
+
+    const ctx = canvas.getContext("2d");
+    if (!ctx) return;
+
+    const points: Point[] = [];
+    const particleCount = 60;
+    const connectionDistance = 120;
+    const animationSpeed = 0.7;
+
+    // Set canvas dimensions to match parent
+    const resizeCanvas = () => {
+      const parent = canvas.parentElement;
+      if (!parent) return;
+
+      canvas.width = parent.clientWidth;
+      canvas.height = parent.clientHeight;
+    };
+
+    window.addEventListener("resize", resizeCanvas);
+    resizeCanvas();
+
+    // Create initial particles
+    for (let i = 0; i < particleCount; i++) {
+      points.push({
+        x: Math.random() * canvas.width,
+        y: Math.random() * canvas.height,
+        vx: (Math.random() - 0.5) * animationSpeed,
+        vy: (Math.random() - 0.5) * animationSpeed,
+      });
+    }
+
+    // Animation loop
+    function animate() {
+      if (!ctx) return;
+      if (canvas) {
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+      }
+
+      // Draw particles and update positions
+      ctx.fillStyle = "#FFFFFF";
+      points.forEach((point) => {
+        // Update position
+        point.x += point.vx;
+        point.y += point.vy;
+
+        // Bounce off edges
+        if (canvas && (point.x < 0 || point.x > canvas.width)) point.vx *= -1;
+        if (canvas && (point.y < 0 || point.y > canvas.height)) point.vy *= -1;
+
+        // Draw point
+        ctx.beginPath();
+        ctx.arc(point.x, point.y, 2, 0, Math.PI * 2);
+        ctx.fill();
+      });
+
+      // Draw connections
+      ctx.strokeStyle = "rgba(255, 255, 255, 0.5)";
+      ctx.lineWidth = 0.5;
+
+      for (let i = 0; i < points.length; i++) {
+        for (let j = i + 1; j < points.length; j++) {
+          const dx = points[i].x - points[j].x;
+          const dy = points[i].y - points[j].y;
+          const distance = Math.sqrt(dx * dx + dy * dy);
+
+          if (distance < connectionDistance) {
+            ctx.beginPath();
+            ctx.moveTo(points[i].x, points[i].y);
+            ctx.lineTo(points[j].x, points[j].y);
+            ctx.stroke();
+          }
+        }
+      }
+
+      requestAnimationFrame(animate);
+    }
+
+    animate();
+
+    return () => {
+      window.removeEventListener("resize", resizeCanvas);
+    };
+  }, []);
+
   const services: ServiceItem[] = [
     {
       title: "Fuel Cards with Maximum Discounts for Trucking Businesses",
@@ -204,12 +303,21 @@ export default function ServicesPage() {
             ))}
           </div>
         </div>
-        
+
         <div
-          className="rounded-xl bg-gradient-to-r from-[#6CC000] to-[#8BD300] p-10 text-[#0E0E0E] shadow-xl"
+          className="relative rounded-xl bg-gradient-to-r from-[#6dc0003e] to-[#8BD300] p-10 text-[#fff] shadow-xl overflow-hidden"
           data-aos="fade-up"
         >
-          <div className="grid gap-8 md:grid-cols-2 md:items-center">
+          {/* Network animation background */}
+          <div className="absolute inset-0">
+            <canvas
+              ref={canvasRef}
+              className="absolute inset-0 w-full h-full"
+            />
+          </div>
+
+          {/* Content overlay */}
+          <div className="relative grid gap-8 md:grid-cols-2 md:items-center z-10">
             <div>
               <h2 className="mb-4 text-3xl font-bold">Ready to Get Started?</h2>
               <p className="mb-6">
