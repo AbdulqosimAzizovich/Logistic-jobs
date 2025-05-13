@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { useState } from "react";
 
 export default function Testimonials() {
@@ -6,6 +7,7 @@ export default function Testimonials() {
       id: 1,
       name: "Michael Johnson",
       role: "Long-haul Truck Driver",
+      image: "/pr2.jpg",
       content:
         "THE RECRUITING helped me find a job that perfectly matched my experience and route preferences. The application process was smooth, and I was on the road with a great company within a week!",
       rating: 5,
@@ -14,6 +16,7 @@ export default function Testimonials() {
       id: 2,
       name: "Robert Garcia",
       role: "Regional Driver",
+      image: "/pr3.jpg",
       content:
         "After years of struggling to find local routes that would allow me to be home more often, I found the perfect position through THE RECRUITING . The job filtering options made it easy to find exactly what I was looking for.",
       rating: 5,
@@ -22,6 +25,7 @@ export default function Testimonials() {
       id: 3,
       name: "Sarah Williams",
       role: "Fleet Manager",
+      image: "/pr1.jpg",
       content:
         "As a hiring manager, THE RECRUITING has been invaluable for finding qualified drivers. The platform connects us with pre-screened candidates who match our requirements, saving us time and resources in the hiring process.",
       rating: 4,
@@ -56,10 +60,17 @@ export default function Testimonials() {
               <p className="text-[#FFFFFF] mb-6">{testimonial.content}</p>
 
               <div className="flex items-center">
-                <div className="w-12 h-12 bg-[#6CC000] rounded-full flex items-center justify-center mr-4">
-                  <span className="text-[#FFFFFF] font-bold">
-                    {testimonial.name.charAt(0)}
-                  </span>
+                <div className="mr-4 h-12 w-12 overflow-hidden rounded-full">
+                  <Image
+                    src={
+                      testimonial.image ||
+                      "https://kzmof4c28tjyljmexmxb.lite.vusercontent.net/placeholder.svg"
+                    }
+                    alt={testimonial.name}
+                    width={48}
+                    height={48}
+                    className="h-full w-full object-cover"
+                  />
                 </div>
                 <div>
                   <h4 className="font-bold text-[#FFFFFF]">

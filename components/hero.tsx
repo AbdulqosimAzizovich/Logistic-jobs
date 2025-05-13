@@ -76,21 +76,23 @@ export default function Hero() {
                   <TrendingUp className="h-6 w-6 text-[#8BD300]" />
                   <div>
                     <p className="text-white font-semibold">100+</p>
-                    <p className="text-gray-400 text-sm">Jobs</p>
+                    <p className="text-gray-400 text-sm">Available Jobs</p>
                   </div>
                 </div>
                 <div className="flex items-center space-x-3">
                   <TrendingUp className="h-6 w-6 text-[#8BD300]" />
                   <div>
                     <p className="text-white font-semibold">200+</p>
-                    <p className="text-gray-400 text-sm">Partners</p>
+                    <p className="text-gray-400 text-sm">Partner Companies</p>
                   </div>
                 </div>
                 <div className="flex items-center space-x-3">
                   <TrendingUp className="h-6 w-6 text-[#8BD300]" />
                   <div>
                     <p className="text-white font-semibold">1500+</p>
-                    <p className="text-gray-400 text-sm">Placements</p>
+                    <p className="text-gray-400 text-sm">
+                      Successful Placements
+                    </p>
                   </div>
                 </div>
               </div>
@@ -101,9 +103,11 @@ export default function Hero() {
           <AnimateOnScroll animation="fade-up" delay={200}>
             <div className="bg-[#1F2A38] border border-[#8BD300]/20 rounded-2xl shadow-2xl p-10 transform transition-all hover:scale-[1.02]">
               <h2 className="text-3xl font-bold text-white mb-6 text-center">
-                Accelerate Your Career
+                Leave your information here
                 <br />
-                <span className="text-[#8BD300]">Request Consultation</span>
+                <span className="text-[#8BD300]">
+                  Our managers will contact you soon
+                </span>
               </h2>
               <form className="space-y-6">
                 <div>
@@ -170,7 +174,7 @@ export default function Hero() {
                   type="submit"
                   className="w-full bg-gradient-to-r from-[#6CC000] to-[#8BD300] text-black py-3 text-lg font-bold hover:opacity-90 transition-opacity"
                 >
-                  Request Professional Consultation
+                  Request a callback
                 </Button>
               </form>
             </div>

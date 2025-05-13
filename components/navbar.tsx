@@ -76,16 +76,24 @@ export default function Navbar() {
 
         <Sheet>
           <SheetTrigger asChild>
-            <Button variant="ghost" size="icon" className="md:hidden">
+            <Button variant="menu" size="icon" className="md:hidden bg-accent">
               <Menu className="h-6 w-6" />
               <span className="sr-only">Toggle menu</span>
             </Button>
           </SheetTrigger>
-          <SheetContent side="right">
+          <SheetContent side="right" className="bg-black/90 text-white">
             <div className="flex flex-col gap-8 pt-10">
               <Link href="/" className="flex items-center gap-2">
-                <Truck className="h-6 w-6 text-gray-600" />
-                <span className="text-lg font-bold  text-gray-600">
+                <Image
+                  src="/oq-fonsiz.png"
+                  alt="Logo"
+                  width={40}
+                  height={40}
+                  className="h-24 w-24 rounded-full"
+                  priority
+                />
+
+                <span className="text-lg font-bold  text-white">
                   THE RECRUITING
                 </span>
               </Link>
@@ -95,10 +103,10 @@ export default function Navbar() {
                     <Link
                       href={route.path}
                       className={cn(
-                        "text-base font-medium transition-colors hover:text-gray-700",
+                        "text-base font-medium transition-colors hover:text-gray-400",
                         pathname === route.path
-                          ? "text-gray-100"
-                          : "text-gray-600"
+                          ? "text-[#6CC000]"
+                          : "text-white"
                       )}
                     >
                       {route.name}
