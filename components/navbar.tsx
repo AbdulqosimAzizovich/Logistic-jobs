@@ -85,7 +85,7 @@ export default function Navbar() {
             <div className="flex flex-col gap-8 pt-10">
               <Link href="/" className="flex items-center gap-2">
                 <Image
-                  src="/oq-fonsiz.png"
+                  src="/Logo.jpg"
                   alt="Logo"
                   width={40}
                   height={40}
