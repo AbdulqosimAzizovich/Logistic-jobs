@@ -49,7 +49,7 @@ export default function Navbar() {
       <div className="container mx-auto flex items-center justify-between px-4">
         <Link href="/" className="flex items-center gap-2">
           <Image
-            src="/Logo-fonsiz-standart.png"
+            src="/Logo.jpg"
             alt="Logo"
             width={40}
             height={40}
