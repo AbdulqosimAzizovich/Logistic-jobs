@@ -47,16 +47,18 @@ export default function Navbar() {
       )}
     >
       <div className="container mx-auto flex items-center justify-between px-4">
-        <Link href="/" className="flex items-center gap-2">
-          <Image
-            src="/Logo.jpg"
-            alt="Logo"
-            width={40}
-            height={40}
-            className="h-10 w-10 rounded-full"
-            priority
-          />
-          <span className="text-xl font-bold text-white">THE RECRUITING </span>
+        <Link href="/" className="flex items-center gap-3">
+          <div className="flex items-center">
+            <Image
+              src="/Logo.png"
+              alt="Logo"
+              width={120}
+              height={120}
+              className="h-16 w-auto"
+              priority
+            />
+          </div>
+          <span className="text-xl font-bold text-white">THE RECRUITING</span>
         </Link>
 
         <nav className="hidden items-center gap-8 md:flex">
@@ -84,16 +86,17 @@ export default function Navbar() {
           <SheetContent side="right" className="bg-black/90 text-white">
             <div className="flex flex-col gap-8 pt-10">
               <Link href="/" className="flex items-center gap-2">
-                <Image
-                  src="/Logo.jpg"
-                  alt="Logo"
-                  width={40}
-                  height={40}
-                  className="h-24 w-24 rounded-full"
-                  priority
-                />
-
-                <span className="text-lg font-bold  text-white">
+                <div className="flex items-center">
+                  <Image
+                    src="/Logo.jpg"
+                    alt="Logo"
+                    width={150}
+                    height={150}
+                    className="h-32 w-auto rounded-full"
+                    priority
+                  />
+                </div>
+                <span className="text-lg font-bold text-white">
                   THE RECRUITING
                 </span>
               </Link>

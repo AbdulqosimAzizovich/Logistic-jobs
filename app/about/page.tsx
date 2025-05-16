@@ -232,10 +232,10 @@ export default function AboutPage() {
 
           {/* Content overlay */}
           <div className="relative text-center p-8">
-            <h2 className="mb-6 text-3xl font-bold text-[#0E0E0E]">
+            <h2 className="mb-6 text-3xl font-bold text-[#fff]">
               Join Our Network
             </h2>
-            <p className="mx-auto mb-8 max-w-2xl text-[#0E0E0E]">
+            <p className="mx-auto mb-8 max-w-2xl text-[#fff]">
               Whether you're a driver looking for your next opportunity or a
               company seeking reliable transportation solutions, THE RECRUITING
               is here to help you succeed.
@@ -250,7 +250,7 @@ export default function AboutPage() {
               <Button
                 asChild
                 variant="outline"
-                className="border-[#0E0E0E] text-[#0E0E0E] hover:bg-[#0E0E0E] hover:text-[#FFFFFF]"
+                className="border-[#fff] text-[#fff] hover:bg-[#0E0E0E] hover:text-[#ffffff]"
               >
                 <Link href="/contact">Contact Us</Link>
               </Button>
