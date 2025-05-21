@@ -42,19 +42,19 @@ export default function Navbar() {
   return (
     <header
       className={cn(
-        "fixed top-0 z-50 w-full transition-all duration-300",
-        isScrolled ? "bg-black shadow-md py-2" : "bg-transparent py-4"
+        "fixed top-0 z-50 w-full transition-all duration-300 h-20",
+        isScrolled ? "bg-black shadow-md" : "bg-transparent"
       )}
     >
-      <div className="container mx-auto flex items-center justify-between px-4">
-        <Link href="/" className="flex items-center gap-3">
+      <div className="container mx-auto flex items-center justify-between px-4 h-full">
+        <Link href="/" className="flex items-center">
           <div className="flex items-center">
             <Image
               src="/Logo.png"
               alt="Logo"
               width={120}
               height={120}
-              className="h-16 w-auto"
+              className="w-auto object-contain"
               priority
             />
           </div>
@@ -85,18 +85,18 @@ export default function Navbar() {
           </SheetTrigger>
           <SheetContent side="right" className="bg-black/90 text-white">
             <div className="flex flex-col gap-8 pt-10">
-              <Link href="/" className="flex items-center gap-2">
-                <div className="flex items-center">
+              <Link href="/" className="flex items-center">
+                <div className="flex items-center mr-1">
                   <Image
                     src="/Logo.jpg"
                     alt="Logo"
-                    width={150}
-                    height={150}
-                    className="h-32 w-auto rounded-full"
+                    width={280}
+                    height={280}
+                    className="w-44 h-44 object-contain rounded-full"
                     priority
                   />
                 </div>
-                <span className="text-lg font-bold text-white">
+                <span className="text-xl font-bold text-white">
                   THE RECRUITING
                 </span>
               </Link>
